@@ -57,6 +57,15 @@ enum SectionType {
   stats,
   testimonials,
   team,
+  // New types
+  navHeader,
+  footer,
+  featuresGrid,
+  newsGrid,
+  eventsGrid,
+  partners,
+  ctaSection,
+  faq,
 }
 
 class SectionData {

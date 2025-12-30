@@ -106,6 +106,59 @@ class _PageBuilderScreenState extends State<PageBuilderScreen> {
             ),
           ]);
           break;
+        case SectionType.navHeader:
+          section.bgColor = '#FFFFFF';
+          break;
+        case SectionType.footer:
+          section.bgColor = '#1A1A1A';
+          break;
+        case SectionType.featuresGrid:
+          section.blocks.addAll([
+            BlockData(
+              id: '${section.id}_1',
+              type: BlockType.heading,
+              value: 'Our Focus Areas',
+            ),
+          ]);
+          break;
+        case SectionType.newsGrid:
+          section.blocks.add(
+            BlockData(
+              id: '${section.id}_1',
+              type: BlockType.heading,
+              value: 'Latest News',
+            ),
+          );
+          break;
+        case SectionType.eventsGrid:
+          section.blocks.add(
+            BlockData(
+              id: '${section.id}_1',
+              type: BlockType.heading,
+              value: 'Upcoming Events',
+            ),
+          );
+          break;
+        case SectionType.partners:
+          break;
+        case SectionType.ctaSection:
+          section.blocks.add(
+            BlockData(
+              id: '${section.id}_1',
+              type: BlockType.heading,
+              value: 'Ready to help?',
+            ),
+          );
+          break;
+        case SectionType.faq:
+          section.blocks.add(
+            BlockData(
+              id: '${section.id}_1',
+              type: BlockType.heading,
+              value: 'Frequently Asked Questions',
+            ),
+          );
+          break;
         default:
           section.blocks.add(
             BlockData(
@@ -406,6 +459,39 @@ class _PageBuilderScreenState extends State<PageBuilderScreen> {
                   'Testimonials',
                 ),
                 _sectionButton(SectionType.team, Icons.people, 'Team Section'),
+                const Divider(),
+                _sectionButton(
+                  SectionType.navHeader,
+                  Icons.menu,
+                  'Navigation Header',
+                ),
+                _sectionButton(SectionType.footer, Icons.info, 'Footer'),
+                _sectionButton(
+                  SectionType.featuresGrid,
+                  Icons.grid_view,
+                  'Features Grid',
+                ),
+                _sectionButton(
+                  SectionType.newsGrid,
+                  Icons.newspaper,
+                  'News Grid',
+                ),
+                _sectionButton(
+                  SectionType.eventsGrid,
+                  Icons.event,
+                  'Events Grid',
+                ),
+                _sectionButton(
+                  SectionType.partners,
+                  Icons.business,
+                  'Partners',
+                ),
+                _sectionButton(
+                  SectionType.ctaSection,
+                  Icons.call_to_action,
+                  'CTA Section',
+                ),
+                _sectionButton(SectionType.faq, Icons.quiz, 'FAQ Section'),
               ],
             ),
           ),
